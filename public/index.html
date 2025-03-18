@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Legends</title>
+    <style>
+        /* Resetando margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo e fonte */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #181818;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Cabeçalho com fundo de imagem */
+        header {
+            background: url('https://images.pexels.com/photos/2704097/pexels-photo-2704097.jpeg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        /* Navegação */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a:hover {
+            color: #ff4500;
+        }
+
+        /* Seção de conteúdo */
+        section {
+            padding: 60px 10%;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff4500;
+        }
+
+        .album {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .album div {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .album div:hover {
+            transform: scale(1.05);
+        }
+
+        .album img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .album p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #111;
+            padding: 20px;
+            color: #fff;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* Media Queries para Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3rem;
+            }
+
+            section {
+                padding: 40px 5%;
+            }
+
+            nav a {
+                font-size: 1rem;
+                margin: 0 10px;
+            }
+
+            .album {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 40px 2%;
+            }
+
+            .album {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Rock Legends</h1>
+</header>
+
+<nav>
+    <a href="#">Início</a>
+    <a href="#">Sobre</a>
+    <a href="#">Álbuns</a>
+    <a href="#">Contato</a>
+</nav>
+
+<section>
+    <h2>Álbuns Icônicos</h2>
+    <div class="album">
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/ab/ACDC_Back_in_Black.png" alt="AC/DC - Back in Black">
+            <p>AC/DC - Back in Black</p>
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Pink_Floyd_The_Wall.png" alt="Pink Floyd - The Wall">
+            <p>Pink Floyd - The Wall</p>
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Metallica_-_Master_of_Puppets.png" alt="Metallica - Master of Puppets">
+            <p>Metallica - Master of Puppets</p>
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Queen_-_A_Night_at_the_Opera.png" alt="Queen - A Night at the Opera">
+            <p>Queen - A Night at the Opera</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Rock Legends. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    // Exemplo de JavaScript para interação
+    document.querySelectorAll('.album div').forEach(item => {
+        item.addEventListener('click', function() {
+            alert('Você clicou em: ' + this.querySelector('p').textContent);
+        });
+    });
+</script>
+
+</body>
+</html>
